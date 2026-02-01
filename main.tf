@@ -22,3 +22,14 @@ module "azure_network" {
   environment = var.environment
   subscription_id = var.azure_subscription_id
 }
+
+module "aws_kubernetes" {
+  source = "./module/aws/kubernetes"
+  environment = var.environment
+}
+
+module "azure_kubernetes" {
+  source = "./module/azure/kubernetes"
+  environment = var.environment
+  subscription_id = var.azure_subscription_id
+}
